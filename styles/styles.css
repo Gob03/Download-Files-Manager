@@ -1,0 +1,340 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --color-titleBG: #F4FDD9;
+    --color-asideBG: #E4FFE1;
+    --color-bodyBG: #6A8D73;
+    --color-copyIcon: #51BBFE;
+
+    --color-navBG: #002500;
+    --color-mainSectionElementBG: #95D9C3;
+    --color-mainSectionElementExtra: #A4F9C8;
+
+    --color-darkLetter : rgb(45,62,80);
+    --color-brightLetter: #EEEEEE
+}
+
+body{
+    background: var(--color-bodyBG);
+}
+
+#main-container{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+/*---------------------------------------------------------------
+                    LOGO
+----------------------------------------------------------------*/
+#logo{
+    border-bottom: 5px solid rgb(45, 62, 80);
+    position: sticky;
+    top: 0;
+    height: 75px;
+    background: var(--color-titleBG);
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+
+#logo img{
+    height: 60px;
+    margin: 0 5px;
+    transition: transform 1s;
+    margin-left: 6px;
+}
+
+#logo div{
+    display: inline-block;
+}
+.logo__firstPart{
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: block;
+    color: rgb(45, 62, 80);
+}
+
+.logo__secondPart{
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgb(46, 121, 189);
+}
+
+#logo:hover img{
+    animation-name: logoAnimation;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+} 
+
+@keyframes logoAnimation {
+    0%{scale:1}
+    50%{scale: 1.1;}
+}
+
+/*---------------------------------------------------------------
+                    ASIDE
+----------------------------------------------------------------*/
+#lastLinksAside{
+    background: var(--color-asideBG);
+    min-height: 100vh;
+    color: var(--color-darkLetter);
+    display: inline-block;
+}
+
+#aside__title{
+    width: 80%;
+    margin:auto;
+    text-align: center;
+    font-size: 1.4rem;
+    padding: 2px 0 10px 0;
+    position: sticky;
+    top: 75px;
+    background: var(--color-titleBG);
+    border-radius: 0 0 50% 50%;
+    border-bottom: 3px solid var(--color-darkLetter);
+    border-left: 3px solid var(--color-darkLetter);
+    border-right: 3px solid var(--color-darkLetter);
+    margin-bottom: 10px;
+
+}
+
+#aside__lastLinksList{
+    width: 90%;
+    margin: auto;
+    list-style:none;
+    font-size: 1.2rem;
+    word-break: break-all;
+    display: grid;
+    grid-template-columns: 9fr 1fr;
+    align-items: center;
+}
+
+#aside__lastLinksList li{
+    border-bottom: 1px solid var(--color-darkLetter);
+    padding: 15px 0;
+}
+
+.copyIcon {
+    border-radius: 50%;
+    margin-left: 5px;
+    background: var(--color-copyIcon);
+    padding: 5px;
+}
+
+.copyIcon:hover {
+    cursor: pointer;
+}
+
+/*---------------------------------------------------------------
+                    MAIN CONTAINER : NAV
+----------------------------------------------------------------*/
+#mainSection__nav{
+    height: 75px;
+    background: var(--color-navBG);
+    color: var(--color-brightLetter);
+    display: grid;
+    grid-template-columns: 7fr 3fr;
+}
+
+#mainSection__nav ul{
+    font-size: 1.6rem;
+    list-style: none;
+    margin-left: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    text-align: center;
+}
+
+#mainSection__nav ul li{
+    background: #446944;
+    margin: 10px;
+    height: 55px;
+    padding: 10px;
+    transition: background .3s ease-in;
+}
+
+#mainSection__nav ul li:hover{
+    background: #779b77;
+    cursor: pointer;
+}
+
+#mainSection__nav div{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    align-items: center;
+}   
+
+#searchInput{
+    height: 55px;   
+    font-size: 1.1rem;
+    padding: 0 8px;
+    border: 1px solid var(--color-darkLetter);
+}
+
+#searchInput:focus{
+    background: #DDDDDD;
+    outline: none;
+}
+
+#searchBtn{
+    height: 55px;
+    background: #FFFFFF;
+    border-radius: 0 50% 50% 0;
+    padding: 5px;
+    border:1px solid var(--color-darkLetter)
+}
+
+#searchBtn:hover{
+    background: #DDDDDD;
+    cursor: pointer;
+}
+
+/*---------------------------------------------------------------
+                    MAIN CONTAINER : BODY
+----------------------------------------------------------------*/
+
+#mainSection__body{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.mainSection__element{
+    margin: 10px;
+    background: var(--color-mainSectionElementBG);
+    text-align: center;
+    border-radius: 20px;
+    transition: opacity .3s;
+}
+
+.mainSection__element:hover{
+    opacity: .9;
+}
+
+/*PROPIEDADES DEL TITULOS DE LOS ELEMENTOS*/
+.mainSection__element header{
+    font-size: 2rem;
+    border-bottom: 2px solid var(--color-darkLetter);
+    padding: 10px;
+    background: #A7FAE5;
+    border-radius: 15px 15px 0 0;
+    font-weight: bold;
+}
+
+/* PROPIEDADES DE LA IMAGEN DEL MAS */
+.mainSection__element img{
+    margin:40px 10px;
+}
+
+/*PROPIEDADES DEL CONTENEDOR PARA ANADIR UN NUEVO ENLACE MANUALMENTE*/
+#newLink{
+    display: grid;
+    grid-template-columns: 2fr 8fr;
+    margin: 0 10px;
+    align-items: center;
+}
+
+/*PROPIEDADES DE LOS LABELS DE LOS INPUTS*/
+label{
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+
+/*PROPIEDADES DE LOS INPUTS*/
+#linkURLInput ,#linkChannelInput, #linkNameInput{
+    padding: 4px;
+    font-size: .9rem;
+    border: 1px solid var(--color-darkLetter);
+    margin: 0 0 10px 0;
+    width: 100%;
+}
+
+#linkURLInput:focus ,#linkChannelInput:focus, #linkNameInput:focus{
+    background: #DDDDDD;
+    outline: none;
+}
+
+/*PROPIEDADES DEL CONTENEDOR DE LOS BOTONES*/
+#element__btnsContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 10px;
+}
+
+/*PROPIEDADES DE LOS BOTONES*/
+
+#saveNewLinkBtn{
+    background: url(../imgs/save.png);
+    background-color: #FFFFFF;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;  
+    transition: background-color .2s;
+    border: 1px solid var(--color-darkLetter);
+    padding: 10px 0;
+    border-radius: 10px 0 0 10px;
+}
+
+#saveNewLinkBtn:hover{
+    background: url(../imgs/save.png);
+    background-color: #DDDDDD;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;  
+    cursor: pointer;
+}
+
+#cleanInputsBtn{
+    background: url(../imgs/clean.png);
+    background-color: #FFFFFF;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;  
+    transition: background-color .2s;
+    border: 1px solid var(--color-darkLetter);
+    padding: 10px 0;
+    border-radius: 0 10px 10px 0;
+}
+
+#cleanInputsBtn:hover{
+    background: url(../imgs/clean.png);
+    background-color: #DDDDDD;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;  
+    cursor: pointer;
+}
+
+/* PROPIEDADES DEL ELEMENTO QUE SE CONECTA A YOUTUBE PARA TOMAR INFORMACION DE UN VIDEO*/
+#linkInfoInput{
+    width: 90%;
+    margin: 15px auto;
+    padding: 10px;
+}
+
+#linkInformation{
+    width: 90%;
+    margin: auto;
+    text-align: left;
+    font-size: 1.1rem;
+}
+
+#linkInformation h2{
+    text-decoration: underline;
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+#linkInformation p{
+    border-bottom: 1px solid var(--color-darkLetter);
+    font-size: 1.3rem;
+}
+
+
+
+

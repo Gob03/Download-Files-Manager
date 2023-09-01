@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ICON by Fasil on freeicons.io el de la papelera-->
+    <!-- ICON by Chatuphoom Nanapo on freeicons.io el de la escoba-->
+    <!-- ICON by Muhammad Haq on freeicons.io el de correcto-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Files Manager</title>
+    <link rel="stylesheet" href="styles/styles.css"> 
+    <script src="scripts/index.js" type="module"></script>
+    <script src="scripts/clean.js" type="module"></script>
+</head>
+<body>
+    <div id="main-container">
+        <aside id="lastLinksAside">
+            <header id="logo">       
+                <img src="imgs/logo.png" > <!--ICON by MD Badsha Meah on freeicons.io -->
+                <div>
+                    <span class="logo__firstPart">Download Files</span>
+                    <span class="logo__secondPart">Manager</span>
+                </div>
+            </header>
+            <h2 id="aside__title">Ultimos 10 Links Anadidos: </h2>
+            <ul id="aside__lastLinksList">
+                <!--ICON by 11Umbrella on freeicons.io-->              
+            </ul>
+        </aside>
+        <div id="mainSection-Container">
+            <nav id="mainSection__nav">
+                <ul>
+                    <li>Historial</li>
+                    <li>Info</li>
+                    <li>Algo</li>
+                </ul>
+                <div>
+                    <input type="text" id="searchInput" placeholder="Search...">
+                    <img src="imgs/search.png" width="40px" height="540px" id="searchBtn"><!-- ICON by icon king1 on freeicons.io-->
+                </div>
+            </nav>
+            <div id="mainSection__body">
+                <div class="mainSection__element">
+                    <header>Anadir nuevo enlace manualmente:</header>
+                    <div id="newLink">
+                        <img src="imgs/add.png">    <!-- ICON by Raj Dev on freecoins.io -->
+                        <div>
+                            <label for="linkNameInput">Nombre (OPCIONAL)</label>
+                            <input type="text" id="linkNameInput">
+
+                            <label for="linkChannelInput">Canal (OPCIONAL)</label>
+                            <input type="text" id="linkChannelInput">
+
+                            <label for="linkURLInput">URL (OBLIGATORIO)</label>
+                            <input type="text" id="linkURLInput">
+                        </div>
+                    </div>
+                    <div id="element__btnsContainer">
+                        <input type="button" value="" id="saveNewLinkBtn" class="btns">    <!-- ICON by Fasil on freeicons.io-->
+                        <input type="button" value="" id="cleanInputsBtn" class="btns">
+                    </div>
+                </div>
+
+                <div class="mainSection__element">
+                    <header>Buscar Informacion sobre enlace:</header>
+                    <input type="text" placeholder="URL..." id="linkInfoInput">
+                    <div id="linkInformation">
+                        <h2>Informacion sobre el enlace:</h2>
+                        <p>Nombre: NOMBRE DEL VIDEO</p>
+                        <p>Canal: CANAL</p>
+                        <p>Duracion: 12:34</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
